@@ -127,7 +127,7 @@ static NSString * const CellKind = @"CardCell";
 - (CGSize)collectionViewContentSize {
     CGSize retVal = CGSizeZero;
     
-    if (_layoutType == EBCardCollectionLayoutHorizontal) {
+    if (_layoutType == CardCollectionLayoutHorizontal) {
         retVal = CGSizeMake([self pageWidth] * [self.collectionView numberOfItemsInSection:0] + _offset.horizontal,
                             self.collectionView.bounds.size.height);
     } else {
@@ -145,7 +145,7 @@ static NSString * const CellKind = @"CardCell";
     CGFloat rawPageValue = 0;
     CGFloat velocityValue = 0;
     
-    if (_layoutType == EBCardCollectionLayoutHorizontal) {
+    if (_layoutType == CardCollectionLayoutHorizontal) {
         rawPageValue = self.collectionView.contentOffset.x / [self pageWidth];
         velocityValue = velocity.x;
     } else {
@@ -172,7 +172,7 @@ static NSString * const CellKind = @"CardCell";
     if (pannedLessThanAPage && flicked) {
         
         //  Change UICollectionViewCell
-        if (_layoutType == EBCardCollectionLayoutHorizontal) {
+        if (_layoutType == CardCollectionLayoutHorizontal) {
             retVal.x = nextPage * [self pageWidth];
             
             if (nextPage < [self.collectionView numberOfItemsInSection:0]) {
@@ -189,7 +189,7 @@ static NSString * const CellKind = @"CardCell";
         
     } else {
         //  Bounces
-        if (_layoutType == EBCardCollectionLayoutHorizontal) {
+        if (_layoutType == CardCollectionLayoutHorizontal) {
             CGFloat posX = round(rawPageValue) * [self pageWidth] - _offset.horizontal/2;
             posX = MAX(0, posX);
             retVal.x = posX;
@@ -211,7 +211,7 @@ static NSString * const CellKind = @"CardCell";
     
     CGRect retVal = CGRectZero;
     
-    if (_layoutType == EBCardCollectionLayoutHorizontal) {
+    if (_layoutType == CardCollectionLayoutHorizontal) {
         NSInteger posX = _offset.horizontal / 2 + [self pageWidth] * indexPath.row;
         
         if ([self.collectionView numberOfItemsInSection:0] == 1) {

@@ -42,16 +42,16 @@ static NSString *const footerId = @"footerId";
 
     
 //水平
-//    self.title = @"Horizontal Scrolling";
-//    anOffset = UIOffsetMake(40, 10);
-//    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setOffset:anOffset];
-//    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setLayoutType:EBCardCollectionLayoutHorizontal];
+    self.title = @"Horizontal Scrolling";
+    anOffset = UIOffsetMake(40, 10);
+    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setOffset:anOffset];
+    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setLayoutType:CardCollectionLayoutHorizontal];
 
 //竖直
-    self.title = @"Vertical Scrolling";
-    anOffset = UIOffsetMake(20, 20);
-    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setOffset:anOffset];
-    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setLayoutType:EBCardCollectionLayoutVertical];
+//    self.title = @"Vertical Scrolling";
+//    anOffset = UIOffsetMake(20, 20);
+//    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setOffset:anOffset];
+//    [(PageCollectionFlowLayout *)_collectionView.collectionViewLayout setLayoutType:CardCollectionLayoutVertical];
 
 }
 - (void)viewWillDisappear:(BOOL)animated {

@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, EBCardCollectionLayoutType) {
-    EBCardCollectionLayoutHorizontal,
-    EBCardCollectionLayoutVertical
+typedef NS_ENUM(NSUInteger, CardCollectionLayoutType) {
+    CardCollectionLayoutHorizontal,
+    CardCollectionLayoutVertical
 };
 
 @interface PageCollectionFlowLayout : UICollectionViewFlowLayout
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, EBCardCollectionLayoutType) {
 @property (readonly) NSInteger currentPage;
 @property (nonatomic, assign) UIOffset offset;
 @property (nonatomic, strong) NSDictionary *layoutInfo;
-@property (assign) EBCardCollectionLayoutType layoutType;
+@property (assign) CardCollectionLayoutType layoutType;
 
 - (CGRect)contentFrameForCardAtIndexPath:(NSIndexPath *)indexPath;
 
